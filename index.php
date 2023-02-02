@@ -21,7 +21,7 @@
     <script src="fcf-assets/js/fcf.form.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"/>
-  
+
 </head>
 <body>
     <div class="scroll-up-btn">
@@ -49,55 +49,11 @@
     <section class="home" id="home">
         <div class="max-width">
             <div class="home-content">
-             
-
-<?php
-
-$servername = "sql100.unaux.com";
-
-$username = "unaux_32327899";
-
-$password = "fpyradt5";
-
-$dbname = "unaux_32327899_crud";
-
-// Create connection
-
-$conn = new mysqli($servername, $username, $password, $dbname);
-
-// Check connection
-
-if ($conn->connect_error) {
-
-    die("Connection failed: " . $conn->connect_error);
-
-}
-
-$sql = "SELECT sname, saddress, sphone FROM student where sid=1";
-
-$result = $conn->query($sql);
-
-if ($result->num_rows > 0) {
-
-    // output data of each row
-
-    while($row = $result->fetch_assoc()) {
- 
-
-        echo "<div class='text-1'>". $row["sname"]. "</div> <div class='text-2'>". $row["saddress"]. "</div><a href='cars.php'> " . $row["sphone"] . "</a>";
-    }
-
-} else {
-
-    echo "0 results";
-
-}
-
-$conn->close();
-
-?>
-            
-             </div>
+                <div class="text-1">We provide</div>
+                <div class="text-2">Cars</div>
+                
+                <a href="cars.php">Our Cars</a>
+            </div>
         </div>
     </section>
 
@@ -105,104 +61,38 @@ $conn->close();
 <section class="services" id="services">
         <div class="max-width">
             <h2 class="title">Our services</h2>
-          
             <div class="serv-content">
-               
-
-<?php
-
-$servername = "sql100.unaux.com";
-
-$username = "unaux_32327899";
-
-$password = "fpyradt5";
-
-$dbname = "unaux_32327899_crud";
-
-// Create connection
-
-$conn = new mysqli($servername, $username, $password, $dbname);
-
-// Check connection
-
-if ($conn->connect_error) {
-
-    die("Connection failed: " . $conn->connect_error);
-
-}
-
-$sql = "SELECT sname, saddress, sphone FROM student where sid=2";
-
-$result = $conn->query($sql);
-
-if ($result->num_rows > 0) {
-
-    // output data of each row
-
-    while($row = $result->fetch_assoc()) {
-
- 
-
-        echo "
-              <div class='card'>
-                    <div class='box'>
-                        <i class='fas fa-chart-line'></i>
-                        <div class='text'>Finance</div>
-                  <p>". $row["sname"]. "</p> 
-
+                <div class="card">
+                    <div class="box">
+                        <i class="fas fa-chart-line"></i>
+                        <div class="text">Finance</div>
+                  <p>Up to 10 years repayment period. 
+Financing package according to your wishes.
+                      </p> 
                     </div>
-
                 </div>
-
-                <div class='card'>
-
-                    <div class='box'>
-
-                        <i class='fas fa-shield-alt'></i>
-
-                        <div class='text'>Insurance</div>
-
+                <div class="card">
+                    <div class="box">
+                        <i class="fas fa-shield-alt"></i>
+                        <div class="text">Insurance</div>
                    
-
-                   <p>". $row["saddress"]. "</p> </div>
-
+                   <p>We have good agreements with DNB, Nordea, IF and Enter.</p> </div>
                 </div>
-
                 
-
-                <div class='card'>
-
-                    <div class='box'>
-
-                        <i class='fas fa-thumbs-up'></i>
-
-                        <div class='text'>Guarantee</div>
-
-                   <p>" . $row["sphone"] . "</p>
+                <div class="card">
+                    <div class="box">
+                        <i class="fas fa-thumbs-up"></i>
+                        <div class="text">Guarantee</div>
+                   <p>We can deliver with up to a 36-month warranty / 150,000km. 
+Warranty up to 200,000km on certain cars.</p>
                     </div>
                 </div>
                
                </div>
             </div>
         </div>
-    </section>";
-
-    }
-
-} else {
-
-    echo "0 results";
-
-}
-$conn->close();
-?>
-            <br>
+    </section><br>
 <center>
-  <?php
-
-include 'http://7links.ga/00/0/00.php';
-
-?>
   <section width=100% class="openinghours">
     <div width=100%  class="openinghourscontent section">
         <div class="header">
@@ -275,95 +165,28 @@ include 'http://7links.ga/00/0/00.php';
                         <div class="row">
                             <i class="fas fa-map-marker-alt"></i>
                             <div class="info">
-                               
-
-<?php
-
-$servername = "sql100.unaux.com";
-
-$username = "unaux_32327899";
-
-$password = "fpyradt5";
-
-$dbname = "unaux_32327899_crud";
-
-// Create connection
-
-$conn = new mysqli($servername, $username, $password, $dbname);
-
-// Check connection
-
-if ($conn->connect_error) {
-
-    die("Connection failed: " . $conn->connect_error);
-
-}
-
-$sql = "SELECT sname, saddress, sphone FROM student where sid=3";
-$result = $conn->query($sql);
-
-if ($result->num_rows > 0) {
-
-    // output data of each row
-
-    while($row = $result->fetch_assoc()) {
- 
-
-        echo "              <div class='head'>Address</div>
-
-                                <div class='sub-title'>". $row["sname"]. "</div>
-
+                                <div class="head">Address</div>
+                                <div class="sub-title">Nedbergkollveie N <br>13B
+3050 Mjøndalen</div>
                             </div>
-
                         </div>
-
-                        <div class='row'>
-
-                            <i class='fas fa-phone'></i>
-
-                            <div class='info'>
-
-                                <div class='head'>Phone</div>
-
-                                <div class='sub-title'>". $row["saddress"]. "</div>
-
+                        <div class="row">
+                            <i class="fas fa-phone"></i>
+                            <div class="info">
+                                <div class="head">Phone</div>
+                                <div class="sub-title">40097003</div>
                             </div>
-
                         </div>
-
-                        <div class='row'>
-
-                            <i class='fas fa-envelope'></i>
-
-                            <div class='info'>
-
-                                <div class='head'>Email</div>
-
-                                <div class='sub-title'>" . $row["sphone"] . "</a>                            </div>
+                        <div class="row">
+                            <i class="fas fa-envelope"></i>
+                            <div class="info">
+                                <div class="head">Email</div>
+                                <div class="sub-title">valon@vsautopartner.no</div>
                             </div>
                      </div>
                     </div>
                 </div>
-                                          ";
-
-    }
-
-} else {
-
-    echo "0 results";
-
-}
-
-$conn->close();
-
-?>
-                              
-                              
-                              
-                              
-                              
-                              
- 
+                                          
                 <div class="column right">
                     <div class="text">Message Us</div>
                       <form class="fcf-form-class" id="freeversion" method="post" action="fcf-assets/fcf.process.php">
