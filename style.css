@@ -164,6 +164,19 @@ section .title::after{
 
 
 /* home section styling */
+.home{
+    display: flex;
+    background-image:
+    url("ap.jpg");
+    background-color:
+    red no-repeat center;
+    height: 100vh;
+    color: #fff;
+    min-height: 500px;
+    background-size: cover;
+    background-attachment: fixed;
+    font-family: 'Ubuntu', sans-serif;
+}
 .home .max-width{
   width: 100%;
   display: flex;
